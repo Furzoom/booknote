@@ -1,4 +1,4 @@
-# Git core objects
+#http://blog.csdn.net/liujinchengjx/article/details/152790ehttp://blog.csdn.net/liujinchengjx/article/details/1527909 Git core objects
 
 ## Core objects in git
 
@@ -73,4 +73,4 @@ $ git commit-tree <tree-sha1> -p <parent-tree-sha1>
 ```
 
 
-[Three core objects in git](https://www.git-scm.com/book/en/v2/Git-Internals-Git-Objects)
+1. [Three core objects in git](https://www.git-scm.com/book/en/v2/Git-Internals-Git-Objects)
