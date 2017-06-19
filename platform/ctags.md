@@ -87,6 +87,8 @@ int main()
 - `:tf`或者`:tfirst`，跳转到列表中第一个。
 - `:tl`或者`:tlast`，跳转到列表中的最后一个。
 
+还有一点，如果存在编辑的文件定义了新的函数等，不需要退出vim或保存，然后在命令进行`ctags -R .`。在vim命令模式输入`:tabnext`就会自动的更新了。 
+
 https://courses.cs.washington.edu/courses/cse451/10au/tutorials/tutorial_ctags.html
 https://andrew.stwrt.ca/posts/vim-ctags/
 http://ctags.sourceforge.net/languages.html
