@@ -57,3 +57,36 @@ public:
   explicit B(int x = 0, bool b = true); // default constructor
 };
 ```
+
+## explicit
+
+除非有一个好理由允许构造函数被用于隐式类型转换，否则就把它声明为`explicit`。
+
+## copy构造函数和copy assignment操作符
+
+copy构造函数用来以同类型对象初始化自我对象，copy assignment操作符用来从另一个同类型对象中拷贝其值到自我对象。
+
+```cpp
+class Widget {
+public:
+  Widget();                             // default构造函数
+  Widget(const Widget &rhs);            // copy构造函数
+  Widget& operator=(const Widget &rhs); // copy assignment操作符
+  ...
+};
+
+Widget w1;                              // 调用default构造函数
+Widget w2(w1);                          // 调用copy构造函数
+w1 = w2;                                // 调用copy assignment操作符
+```
+
+copy构造函数是一个重要的函数，它定义了一个对象如何passed by value。
+
+```cpp
+bool hasAcceptableQuality(Widget w);
+...
+Widget aWidget;
+if (hasAcceptableQuality(aWidget)) ...
+```
+
+pass-by-value意味着调用copy构造函数。
